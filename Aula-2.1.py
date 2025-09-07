@@ -1,4 +1,4 @@
-import cv2
+import cv2                          #retirar parte do histograma
 import numpy
 import matplotlib.pyplot as plt
 

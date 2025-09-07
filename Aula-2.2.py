@@ -1,4 +1,4 @@
-import cv2
+import cv2                      #fazer 2 cortes no grafico do histograma
 import numpy
 import matplotlib.pyplot as plt
 
@@ -45,13 +45,13 @@ def corteHistograma(imagem, x, y):
 
 def main():
 
-    imagem = cv2.imread("download.png")
+    imagem = cv2.imread("./imagens/123.png")
 
     canalGray = transformarCinza(imagem)
     plotGrafico(canalGray)
  
     cv2.imshow("Canal gray", canalGray)
-    corte = corteHistograma(canalGray,50, 100)        #  mostrar as cores menores que 120
+    corte = corteHistograma(canalGray,65, 74)        #  mostrar as cores menores que 120
   #   cv2.imshow("ARROZ",corte)
     cv2.imshow('teste',corte)
     cv2.waitKey(0)

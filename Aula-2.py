@@ -1,12 +1,12 @@
-import cv2
+import cv2                          # mostrar RGB histograma
 import numpy
 import matplotlib.pyplot as plt
 
 def separarCamada(imagem):
     #Cria uma matriz do tamanho da imagem contendo somente 0
-    canalBlue = canalBlue = numpy.zeros((imagem.shape[0], imagem.shape[1], imagem.shape[2]), dtype=numpy.uint8)     
-    canalGreen = canalBlue = numpy.zeros((imagem.shape[0], imagem.shape[1], imagem.shape[2]), dtype=numpy.uint8)
-    canalRed = canalBlue = numpy.zeros((imagem.shape[0], imagem.shape[1], imagem.shape[2]), dtype=numpy.uint8)
+    canalBlue = numpy.zeros((imagem.shape[0], imagem.shape[1], imagem.shape[2]), dtype=numpy.uint8)     
+    canalGreen  = numpy.zeros((imagem.shape[0], imagem.shape[1], imagem.shape[2]), dtype=numpy.uint8)
+    canalRed = numpy.zeros((imagem.shape[0], imagem.shape[1], imagem.shape[2]), dtype=numpy.uint8)
 
     canalBlue[:,:,0] = imagem[:,:,0]    #copia o canal azul para a nova matriz
     canalGreen[:,:,1] = imagem[:,:,1]
